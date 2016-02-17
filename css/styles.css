@@ -1,3 +1,9 @@
-.pizza-img {
+.wrapper {
+    width: 100%;
+}
 
+.pizza-img {
+    height: 100vh;
+    margin: auto;
+    display: block;
 }
