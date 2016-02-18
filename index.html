@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@88OCCooooooooooCCO88@@@8:o@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@8CCoCCO88OCCCCCCoCCCCCCOOO8OCCCoc:O@@@@@@@@@Cc@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@8OoCCOOCooccccccccccccccccccccccccooCOCOooC8@@@occ@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@CoCCOoocccccococccccccccccccccoccoccoccccccoCCCCoooc8@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@CoCCCoccccccccccccococococococococcccccococcccccccoCCCoC8@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@OooCooccccccccococccococccccccccccccccccococcccccccccccccoCooC@@@@88@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@ooCoococcccccccococccoccccccccccccccccccccccoccccccccccccccccooCoccC@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@8ooCoccccccccccocccccccccccocococococococococococccccccccocccccccccoCoc8@@@@OO@@@@@@@@
+    @@@@@@@@@@@@@ooooccccccccccccccccccccccccccccc:::::::ccccccccccccccccccccccccccccccoooocC8@@@@@@@@@@
+    @@@@@@@@@@@Cooocccccccccoccccccccccccc:::::::cooc.:.::::::::::ccccccoccccccocccccccccoocC@@@@@@@@@@@
+    @@@@@@@@@8cooocccccccccccccccccccccc::cO@@@@@..c::::::oc::.cc:::::ccccccccccccccccccccooocO@@@@@@@@@
+    @@@@@@@@Ccooccccccccccccccccccccccccc8@@@@@@@@::::c::::::.:cc::..::::cccccccccccccccccccoocc::C@@@@@
+    @@@@@@@ocooccccccccccccccccccccccccoooc8@@@@@@C::::co::::.:::::..:::::::cccccccccccccccccooco@@8O@@@
+    @@@@@@ocoocccccccccccccccccccccccccccoooc8@@@C::::::cooc::..:::..:c:::.:::ccccccccccccccccoocc@@@@@@
+    @@@@@ococccccccccccccccccccccccccccccccoooc8@@@C::::::cc::c:  . .coc:.:cc::cccccccccccccccccocc@@@@@
+    @@@@ococcccccccccccccccccccccccccccccccccooococ:::.::::c:.:cc. :ococ..:: .:::ccccccccccccccccoco@@@@
+    @@@CcccccccccccccccccccccccccccccccccccccccooocC:cc::ccc:.::cc::coo::coooooc::ccccccccccccccccocC@@@
+    @@8ccoccccccccccccccc::ccccccccccccccccccccccoooc::c::cooc::::c::::oooCOoooCC::cccccccccccccccocc8@@
+    @@ococcccccccccccccc:c8c:::ccccccccccccccccccccoooc:::..::::.::.:cooooc::cO8@@c::cccccccccccccccco@@
+    @Occccccccccccccccc::@@@8::::ccccccccccccccccccccoocc::ccc::...::::..::cC8occcO::cccccccccccccccccO@
+    @ccccccccccccccccc::O@@@@@8::::ccccccccccccccccccccoocc.:ooc:....:cccc::coO@@@Oo::ccccccccccccccccc@
+    @:cccccccccccccccc:o@@@@@@@@8::::ccccccccccccccccccccoocc.co:.......::::ccccC@@@o::ccccccccccccccc:@
+    8:ccccccccccccccc::O@@@@@@8oooo::::ccccccccccccccccccccoooccc .:::ccoocccooooO@@O::ccccccccccccccc:8
+    O:ccccccccccccccc::8@@@@OoooCooOC::::ccccccccccccccccccccoocc:ccc@@O:O@@@8Cccco88c:ccccccccccccccc:O
+    O:ccccccccccccccccc@@@CooooCOCCCCCo:::cccccccccccccccccccccooccCco8@@@@@@@@@@@OO8c:ccccccccccccccc:O
+    O::cccccccccccccc::@OoCCOCoCOO888OO8o:::cccccccccccccccccccccooccoO@@@@@@@@@@@@@@c:cccccccccccccc::O
+    O::cccccccccccccc::oooooCoCO8OC88O888OC:::ccccccccccccccccccc:coocc8@@@@@@@@@@@@@c:cccccccccccccc::O
+    O::cc:cccccccccccc:cooooOOO888O8OCOOOOOCo::::ccc:c:c:ccccccc:cc:coocc8@@@@@@@@@@8:cc:ccc:c:cccccc::O
+    8:::c:ccccccccc:ccccCCC88CCOOOOOOO8OCoO8oCC::::c:c:c:ccccccc:c:ccccoocc8@@@@@@@@C:cccc:c:c:c:ccc:::8
+    @c::ccc:cc:cc:cc:cc:COCCCCC888OOCO88OoO8Coooo:::::c:cccc:ccc:c:ccc::coocc8@@@@@8:ccc:cc:c::c:cc:::c@
+    @O:::cc:c:c:c:c:cccccOO88OO8OooOOOO88OOCooOOCOC::::ccc:ccc:c:c:c:c:cc:coocc8@@@occc:c:c:c:cc:c:c::C@
+    @@::::c:c:c:c:c:c:cc:ooO88O88OCCooCCCOOCoC8OcoCCo::::c:c:c:c:c:c:c:c:cc:coocc@Cccc:cc:c:c:c:c:c:::@@
+    @@O:::c:c:c:c:c:c::ccco88OOCCOOOCCCOOoCOooOO8OCCooo::::c:c:c:c:c:c:c:c:c::cooCCoc::::c:c:c::c::::O@@
+    @@@o:::c:c::c:c:c:::coccOCO88CO8OCOOooOOooCooooooCo:::::::c:c:c::c:c::c:c:c::::::c::c:c::c:c:c::o@@@
+    @@@@::::c::c::c:c::::coccoO8oooOCoOOCoccccoOOOCooCOCooc::::::c::c::c:c::c::c::c:c::c:c:c:c:c::::@@@@
+    @@@@8:::::c::c:::c:::::oocc8888OCooCOOOOCoCo:oOCoCCCo:::c:::::::c:::c::c::c::c:c::c:::c:c::c:::8@@@@
+    @@@@@8:::::c:c:::c::::::cocccoooooCCoooOOooOOCoo:::oco::oc::::::c::c::::c::c:c::::::::c::c::::8@@@@@
+    @@@@@@C:::::::c:::c::c::::cooccCooCOCoOOCooooooo::o::o::o:o@O::::::::::::c:::c::::::c::c:::::8@@@@@@
+    @@@@@@Oo::::::::c:::c:::c::::cooccCOOOCooooCOCoCo:occo:::C@@@@Oc::::::c::::c::::c::::::::::c@@@@@@@@
+    @@@@@@Oooc:::::::::::::::::::::coooccoooooCc::oo::c:::.:o@@@@8Cccc::::::::::::::::::::::::o@@@@@@@@@
+    @@@@@@@oooo::::::::::::::::::::::::coCCCcoccocoo:::ccccoCocooCooc::::::::::::::::::::::::8@@@@@@@@@@
+    @@@@@@@8:::oc:::::::::::::::::::::::::::ccoCCCCCCCCCCCCCCocc:::::::::::::::::::::::::::C@@@@@@@@@@@@
+    @@@@@@@@8:ooooc.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.o@@@@@@@@@@@@@@
+    @@@@@@@@@8::ooooc.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.o@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@o::ooCoc:.::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.:O@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@CooooooCo:..::::::::::::::::::::::::::::::::::::::::::::::::::::..o@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@8cc:::ooCC:c..::::::::::::::::::::::::::::::::::::::::::::::..o@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@oo::oo:c::o::...:::::::::::::::::::::::::::::::::::::..cO@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@OC::oo:o:::::::....::::::::::::::::::::::::....cC@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@8CCoococ:ooCOCoc:................:co88@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    -->
+
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>God have mercy on your souls</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,15 +72,19 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
-<body>
+  </head>
+  <body>
 
-<div class="wrapper">
-    <img src="/images/pizza.jpg" class="pizza-img">
-</div>
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="js/bootstrap.min.js"></script>
-</body>
+    <div class="wrapper">
+      <h1>JUST SAY NO</h1>
+      <img src="/images/pizza.jpg" class="pizza-img">
+      <h2>TO THIS SORRY EXCUSE FOR A PIZZA</h2>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+  </body>
 </html>
